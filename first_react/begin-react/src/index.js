@@ -1,24 +1,54 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import Card from './components/Card';
+import Collepse from './components/Collepse';
 
-// JSX 
-// <button type="button" style={{"padding: 10px; color: white; background-color: red; border: 2px solid yellow;">HTML Button</button>
 
- function App(){
+const App = () => {
 
-    const str1 = "Click";
-    const str2 = "Me";
 
-     return(
-    <div>
-        <button type="button" style={{padding:'10px', color:'white', backgroundColor:'blue', border:'2px solid yellow'}}>{str1.concat(str2)}</button>
-        
-    </div>
-     );
- }
 
- ReactDom.render(
-     <App/>,
-     document.getElementById('root')
- ); 
- 
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="card-group w-100">
+                    <div className="col">
+                        <Collepse href="collapseExample1">
+
+                            <Card 
+                                cardText="Lorem Ipsum Text I"
+                                updatedTime="Last Updated 1 min ago"
+                                image="https://picsum.photos/id/1/200/300" />
+
+                        </Collepse>
+                    </div>
+                    <div className="col">
+                        <Collepse href="collapseExample2">
+
+                            <Card cardTitle="Card Title I"
+                                cardText="Lorem Ipsum Text II"
+                                updatedTime="Last Updated 1 min ago"
+                                image="https://picsum.photos/id/10/200/300" />
+
+                        </Collepse>
+                    </div>
+                    <div className="col">
+                        <Collepse href="collapseExample3">
+
+                            <Card 
+                                cardText="Lorem Ipsum Text III"
+                                updatedTime="Last Updated 1 min ago"
+                                image="https://picsum.photos/id/100/200/300" />
+
+                        </Collepse>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+ReactDom.render(
+    <App />,
+    document.getElementById('root')
+);
