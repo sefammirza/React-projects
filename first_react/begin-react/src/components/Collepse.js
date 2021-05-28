@@ -9,14 +9,14 @@ import React from 'react';
 
 class Collepse extends React.Component {
 
-    constructor(){
+    constructor() {
         super();
         this.state = {
-            showContent:false
+            showContent: false
         }
-     /*   this.showMore = () =>{
-
-        }*/
+        /*   this.showMore = () =>{
+   
+           }*/
         //this.showMore = this.showMore.bind(this)
     }
 
@@ -27,25 +27,25 @@ class Collepse extends React.Component {
     }*/
 
     showMore = () => {
-    this.setState({showContent: !this.state.showContent}) 
-    //this.state = {
-    //showContent:true
-    //}
+        this.setState({ showContent: !this.state.showContent })
+        //this.state = {
+        //showContent:true
+        //}
     }
 
     render() {
         return (
             <div>
-                <button className="btn btn-primary w-100" onClick={this.showMore }>
+                <button className="btn btn-primary w-100" onClick={this.showMore}>
                     Link with href
                 </button>
-                
+
                 {
                     this.state.showContent ? (
                         <div className="collapse show">
-                        {this.props.children}
-                    </div>
-                    ) :null
+                            {this.props.children}
+                        </div>
+                    ) : null
                 }
 
 
