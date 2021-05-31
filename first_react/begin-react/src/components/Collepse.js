@@ -9,41 +9,37 @@ import React from 'react';
 
 class Collepse extends React.Component {
 
-    constructor() {
-        super();
-        this.state = {
+    state = {
             showContent: false
         }
-        /*   this.showMore = () =>{
-   
-           }*/
-        //this.showMore = this.showMore.bind(this)
-    }
+    
 
-    /*showMore(){
-        this.setState({showContent: true})
-        //console.log(this)
-        
-    }*/
 
     showMore = () => {
         this.setState({ showContent: !this.state.showContent })
-        //this.state = {
-        //showContent:true
-        //}
     }
+
+    /*componentDidMount(){
+        console.log("Component oluşturuldu")
+    }
+
+    componentDidUpdate(){
+        console.log("Component güncellendi")
+    }*/
+
 
     render() {
         return (
             <div>
                 <button className="btn btn-primary w-100" onClick={this.showMore}>
-                    Link with href
+                    {React.Children.map(this.props.children, children => children.props.cardTitle)}
                 </button>
 
                 {
                     this.state.showContent ? (
                         <div className="collapse show">
-                            {this.props.children}
+                            
+                            {React.Children.map(this.props.children, children => children)}
                         </div>
                     ) : null
                 }

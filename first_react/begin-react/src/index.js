@@ -25,7 +25,7 @@ const App = () => {
                     <div className="col">
                         <Collepse href="collapseExample2">
 
-                            <Card cardTitle="Card Title I"
+                            <Card cardTitle="Test Titlex"
                                 cardText="Lorem Ipsum Text II"
                                 updatedTime="Last Updated 1 min ago"
                                 image="https://picsum.photos/id/10/200/300" />
