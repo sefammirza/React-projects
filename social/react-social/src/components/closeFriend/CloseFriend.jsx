@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event"
 import "./closeFriend.css"
 
 export default function CloseFriend({user}) {
