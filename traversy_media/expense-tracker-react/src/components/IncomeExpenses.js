@@ -1,15 +1,19 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { GlobalContext } from '../context/GlobalState'
 
 export const IncomeExpenses = () => {
+
+    const {transaction} = useContext(GlobalContext)
+
     return (
-        <div class='inc-exp-container'>
+        <div className='inc-exp-container'>
             <div>
                 <h4>Income</h4>
-                <p id='money-plus' class='money plus'>+$0.00</p>
+                <p className='money plus'>+$0.00</p>
             </div>
             <div>
                 <h4>Expence</h4>
-                <p id='money-minus' class='money minus'>-$0.00</p>
+                <p className='money minus'>-$0.00</p>
             </div>
         </div>
     )
