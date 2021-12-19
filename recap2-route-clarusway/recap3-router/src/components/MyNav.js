@@ -9,20 +9,23 @@ const MyNav = () => {
 
   return (
     <div>
-      <Navbar bg="light" expand="lg" onSelect={(eventKey) => navigate(`/${eventKey}`)}>
+      <Navbar 
+      bg="light" 
+      expand="lg" 
+      onSelect={(eventKey) => eventKey === "home" ? navigate("/") : navigate(`/${eventKey}`)}>
         <Container>
           <Navbar.Brand>
             <Nav.Link eventKey="home">
-              <img src={logo}></img>
+              <img src={logo} alt=''/>
             </Nav.Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <NavDropdown title="Courses" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Full-Stack-Developing</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">Data-Science</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Aws Deveps</NavDropdown.Item>
+                <NavDropdown.Item  eventKey="devoloping">Full-Stack-Developing</NavDropdown.Item>
+                <NavDropdown.Item eventKey="data-science">Data-Science</NavDropdown.Item>
+                <NavDropdown.Item eventKey="devops">Aws Deveps</NavDropdown.Item>
               </NavDropdown>
               <Nav.Link eventKey="about">About</Nav.Link>
               <Nav.Link eventKey="instructors">Instructor</Nav.Link>
