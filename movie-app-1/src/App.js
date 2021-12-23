@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AuthContextProvider from "./context/AuthContext";
 import AppRouter from "./router/Router";
 

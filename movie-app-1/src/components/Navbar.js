@@ -11,7 +11,7 @@ const Navbar = () => {
           <a className="navbar-brand " href="/" style={{ color: "white" }}>
             React Movie App
           </a>
-          <div className="buttons">
+          <div className="button">
             {currentUser ? (
               <h3>{currentUser.displayName}</h3>
             ) : (
