@@ -12,6 +12,9 @@ const App = () => {
 
     const [places, setPlaces] = useState([])
 
+    const [coordinates, setCoordinates] = useState({});
+    const [bounds, setBounds] = useState(null);
+
 
     useEffect(() => {
         getPlacesData()
@@ -30,7 +33,11 @@ const App = () => {
                     <List/>
                 </Grid>
                 <Grid item xs={12} md={8}>
-                    <Map/>
+                    <Map
+                    setCoordinates= {setCoordinates}
+                    setBounds={setBounds}
+                    coordinates={coordinates}
+                    />
                 </Grid>
             </Grid>
         </>
