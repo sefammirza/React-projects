@@ -23,11 +23,11 @@ const App = () => {
 
     useEffect(() => {
 
-        getPlacesData(bounds.sw, bounds.ne)
+  /*       getPlacesData(bounds.sw, bounds.ne)
         .then((data) => {
             console.log(data)
             setPlaces(data)
-        })
+        }) */
     }, [coordinates, bounds]);
 
     return (
