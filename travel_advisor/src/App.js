@@ -5,13 +5,12 @@ import {getPlacesData} from './api'
 import Header from './components/Header/Header';
 import List from './components/List/List'
 import Map from './components/Map/Map'
-import PlaceDetails from './components/PlaceDetails/PlaceDetails'
+
 
 
 const App = () => {
 
     const [places, setPlaces] = useState([])
-
     const [coordinates, setCoordinates] = useState({});
     const [bounds, setBounds] = useState(null);
 
@@ -23,9 +22,8 @@ const App = () => {
 
     useEffect(() => {
 
-  /*       getPlacesData(bounds.sw, bounds.ne)
+        /* getPlacesData(bounds.sw, bounds.ne)
         .then((data) => {
-            console.log(data)
             setPlaces(data)
         }) */
     }, [coordinates, bounds]);
